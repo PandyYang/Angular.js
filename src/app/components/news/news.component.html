@@ -1,1 +1,54 @@
-<h2>{{title}}</h2>
+<h2>Angular模板中绑定数据</h2>
+    <h3>{{msg}}</h3>
+    <h4>{{username}}</h4>
+    <h5>{{student}}</h5>
+    <br/>
+    <h5>{{userinfo.username}}</h5>
+    <h5>{{message}}</h5>
+    <br/>
+
+<h1>Angular模板里面绑定属性</h1>
+    <div title="我是一个div">
+        鼠标悬浮查看
+    </div>
+    <div [title]="student">
+        鼠标悬浮查看模板通过div [xxx] 绑定属性
+
+    </div>
+<h1>在模板中绑定html</h1>
+    <div>
+        {{content}}
+    </div>
+    <span [innerHTML] = "content" class="red"></span>
+
+<h1>Angular模板中允许进行简单的运算</h1>
+    <h2>1 + 2 = {{1+2}}</h2>
+    <hr />
+
+<h1>Angular中定义数组</h1>
+    <ol>
+        <li *ngFor="let item of arr">
+            {{item}}
+        </li>
+    </ol>
+    <ul>
+        <li *ngFor="let item of list">
+            {{item}}
+        </li>
+    </ul>
+    <ul>
+        <li *ngFor="let item of userlist">
+            {{item.username}} -- {{item.age}}
+        </li>
+    </ul>
+
+    <ul>
+        <li *ngFor="let item of cars">
+            <h2>{{item.cate}}</h2>
+            <ol>
+                <li *ngFor="let car of item.list">
+                    {{car.title}} ----->{{car.price}}
+                </li>
+            </ol>
+        </li>
+    </ul>
