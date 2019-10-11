@@ -1,1 +1,15 @@
-<h2>我是一个首页组件</h2>
+<h1>引入图片</h1>
+    <img src="assets/images/timg.jpg" alt="收藏">
+<h1>循环数据 显示数据的索引(key)</h1>
+    <ul>
+        <li *ngFor="let item of list;let i = index">
+            {{i}} -- {{item.title}}
+        </li>
+    </ul>
+<h1>angular的条件判断语句 *ngIf</h1>
+    <div *ngIf="flag">
+        <li>123</li>
+    </div>
+    <div *ngIf="!flag">
+        <li>456</li>
+    </div>
